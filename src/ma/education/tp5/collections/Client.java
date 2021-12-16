@@ -1,12 +1,13 @@
 package ma.education.tp5.collections;
 
-class Client /*implements Comparable*/ {
+class Client implements Comparable {
 	Integer code;
 	String name;
 
-	public Client(Integer code, String name) {
-		this.code = code;
+	public Client(String name, Integer code) {
 		this.name = name;
+		this.code = code;
+		
 	}
 
 	@Override
@@ -20,10 +21,25 @@ class Client /*implements Comparable*/ {
 		return this.code == client.code && this.name.equals(client.name);
 	}
 
-	/*@Override
+	// Comparator pour le tri des client par code
 	public int compareTo(Object o) {
 		Client client = (Client) o;
 		return -client.code + this.code;
 
-	}*/
+	}
+
+	// Comparator pour le tri des client par name
+	public int compare(Object o) {
+		Client client = (Client) o;
+		return client.name.compareTo(this.name);
+	}
+	
+	 public String getName() {
+	        return name;
+	    }
+	 
+	 public int getCode() {
+	        return code;
+	    }
+
 }

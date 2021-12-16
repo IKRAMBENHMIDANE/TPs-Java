@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-public class TestList {
+ public class TestList {
 
 	public static void main(String[] args) {
 		List<Integer> list1 = new ArrayList<Integer>();
@@ -13,22 +13,22 @@ public class TestList {
 		list1.add(23);
 		list1.add(23);
 		list1.add(12);
-		// Affichage en utilisant la boucle for classique
+		// Affichage par boucle for classique
 		for (int i = 0; i < list1.size(); i++) {
 			Integer e = (Integer) list1.get(i);
 			System.out.println(" element " + i + " : " + e);
 		}
-		// Affichage en utilisant la boucle for avancée
+		// Affichage par boucle for avancée
 		for (Integer e : list1) {
 			System.out.println(" element " + e);
 		}
-		// Affichage en utilisant un iterator
+		// Affichage par iterator
 		Iterator<Integer> iter = list1.iterator();
 		while (iter.hasNext()) {
 			Integer e = iter.next();
 			System.out.println("element : " + e);
 		}
-		// Affichage en utilisant un iterator
+		// Affichage par iterator
 		list1.forEach(i -> System.out.println(" element " + i));
 	
 		List<Integer> list2= Arrays.asList(1,5,6,9,16);
